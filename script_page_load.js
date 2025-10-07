@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // Redirect to login page
-            window.location.href = 'login.html';
+            window.location.href = 'login.html';  //test only login.html
         } else {
             // User is authenticated
             console.log('User authenticated. Access granted.');
