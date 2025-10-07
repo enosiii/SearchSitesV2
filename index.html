@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Search Dashboard</title>
+    
+    <link rel="icon" type="image/x-icon" href="images/icon512.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#007bff">
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="module" src="script_page_load.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="install-container">
+            <button id="installPWA" style="display: none;" >
+                <i class="fas fa-download"></i> Install App
+            </button>
+        </div>
+
+        <h1>Site Search Dashboard</h1>
+        
+        <div id="search-container" class="search-bar">
+            <input type="text" id="site-search" placeholder="Search by Site">
+            <button onclick="document.getElementById('site-search').value = ''; filterSites();">Clear</button>
+        </div>
+
+        <div id="site-list-container" class="list-container">
+            </div>
+
+        <div id="site-details-container" class="details-container hidden">
+            </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="install.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js', { scope: '/' })
+            .then((registration) => {
+            console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch((error) => {
+            console.error('Service Worker registration failed:', error);
+            });
+        }
+    </script>
+</body>
+</html>

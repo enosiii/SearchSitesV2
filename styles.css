@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#site-search {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+/* List View */
+.list-item {
+    padding: 15px;
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.list-item:hover {
+    background-color: #e9ecef;
+}
+
+.list-item strong {
+    color: #007bff;
+    margin-right: 10px;
+}
+
+/* Details View */
+.details-container {
+    padding: 20px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    background-color: #f9f9ff;
+    margin-top: 20px;
+    /* Crucial: Set position to relative so the close button can be absolutely positioned */
+    position: relative; 
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    line-height: 1;
+}
+
+.close-button:hover {
+    color: #dc3545;
+}
+
+.details-container h2 {
+    color: #007bff;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.detail-item {
+    margin-bottom: 10px;
+}
+
+.map-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+  
+.install-container {
+        text-align: center;
+        vertical-align: middle; 
+        margin-bottom: 0.5rem;
+    }
+    
+    #installPWA {
+        padding: 15px 30px;
+        background: linear-gradient(to right, #2ecc71, #27ae60);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+        align-items: center;
+    }
+    
+    #installPWA i {
+        margin-right: 10px;
+    }
+    
+    #installPWA:hover {
+        background: linear-gradient(to right, #3498db, #2980b9);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(67, 97, 238, 0.4);
+    }
+    
+    #installPWA:active {
+        transform: translateY(0);
+    }

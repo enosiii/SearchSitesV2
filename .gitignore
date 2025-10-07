@@ -1,0 +1,7 @@
+# Ignore environment variables
+.env
+# Ignore deployment artifacts
+.vercel
+# Ignore build command instructions
+*.txt
+instruction.txt
